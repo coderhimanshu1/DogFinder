@@ -10,7 +10,7 @@ const DogDetails = ({ dogs }) => {
   return (
     <>
       <div className="DogDetails">
-        <img src={dog.src} />
+        <img alt={dog.name} src={dog.src} />
         <p>
           <b>Dog Name: </b>
           {dog.name}
