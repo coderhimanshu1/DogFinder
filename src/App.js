@@ -4,14 +4,14 @@ import {
   Route,
 } from "react-router-dom/cjs/react-router-dom.min";
 import "./App.css";
-import Dogs from "./Dogs";
+import DogList from "./DogList";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Route exact path="/dogs">
-          <Dogs />
+          <DogList dogs={App.defaultProps.dogs} />
         </Route>
         <Redirect to="/dogs"></Redirect>
       </BrowserRouter>
