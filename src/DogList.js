@@ -6,7 +6,7 @@ const DogList = ({ dogs }) => {
     <>
       <div className="DogList">
         {dogs.map((dog) => (
-          <Link to={`/${dog.name}`} className="DogList-dog">
+          <Link to={`/dogs/${dog.name}`} className="DogList-dog">
             {dog.name}
           </Link>
         ))}
