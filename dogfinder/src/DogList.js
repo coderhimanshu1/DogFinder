@@ -5,11 +5,13 @@ const DogList = ({ dogs }) => {
   return (
     <>
       <div className="DogList">
-        {dogs.map((dog) => (
-          <Link to={`/dogs/${dog.name}`} className="DogList-dog">
-            {dog.name}
-          </Link>
-        ))}
+        <div className="DogList-link">
+          {dogs.map((dog) => (
+            <Link to={`/dogs/${dog.name}`} className="DogList-dog">
+              {dog.name}
+            </Link>
+          ))}
+        </div>
       </div>
     </>
   );
