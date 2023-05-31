@@ -1,19 +1,13 @@
 import { Link } from "react-router-dom";
 
 const Colors = ({ colors }) => {
-  const renderColors = () => {
-    return (
-      <ul>
-        {colors.map((color) => (
-          <li key={color.id}>
-            <Link to={`/color/${color.color}`} className="Colors-link">
-              {color.color}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    );
-  };
+  const renderColors = colors.map((color) => (
+    <li key={color.id}>
+      <Link to={`/colors/${color.name}`} className="Colors-link">
+        {color.name}
+      </Link>
+    </li>
+  ));
 
   return (
     <div className="Colors">
@@ -22,7 +16,7 @@ const Colors = ({ colors }) => {
       {colors.length > 0 && (
         <div className="Colors-items">
           <h3>Please select a color:</h3>
-          {renderColors()}
+          <ul>{renderColors}</ul>
         </div>
       )}
     </div>

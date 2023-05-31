@@ -21,31 +21,37 @@ const App = () => {
     }
   });
 
-  const addColor = (color) => {
-    const newColor = { color, id: uuid() };
-    setColors((prevColors) => [...prevColors, newColor]);
-  };
-
   useEffect(() => {
     // Save the colors to local storage whenever they change
     localStorage.setItem("colors", JSON.stringify(colors));
   }, [colors]);
 
+  const addColor = (color) => {
+    const newColor = { ...color, id: uuid() };
+    setColors((prevColors) => [...prevColors, newColor]);
+  };
+
+  const renderCurrentColor = (props) => {
+    const { color } = props.match.params;
+    const colorObj = colors.find((c) => c.name === color);
+    return colorObj ? (
+      <Color {...props} hex={colorObj.hex} color={color} />
+    ) : (
+      <Redirect to="/colors" />
+    );
+  };
+
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Route exact path="/colors">
-          <Colors colors={colors} />
-        </Route>
-        <Route path="/color/new">
-          <NewColorform addColor={addColor} />
-        </Route>
-        <Route path="/colors/:color">
-          <Color colors={colors} />
-        </Route>
-        <Redirect to="/colors"></Redirect>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Route exact path="/colors">
+        <Colors colors={colors} />
+      </Route>
+      <Route path="/color/new">
+        <NewColorform addColor={addColor} />
+      </Route>
+      <Route path="/colors/:color" render={renderCurrentColor} />
+      <Redirect to="/colors" />
+    </BrowserRouter>
   );
 };
 
