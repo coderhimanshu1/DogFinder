@@ -1,7 +1,7 @@
-const Color = () => {
+const Color = ({ color }) => {
   return (
     <>
-      <p>color</p>
+      <p>{color}</p>
     </>
   );
 };

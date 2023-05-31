@@ -1,22 +1,31 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
-const Colors = () => {
-  const [colors, setColors] = useState([]);
+const Colors = ({ colors }) => {
+  const renderColors = () => {
+    return (
+      <ul>
+        {colors.map((color) => (
+          <li key={color.id}>
+            <Link to={`/color/${color.color}`} className="Colors-link">
+              {color.color}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    );
+  };
 
   return (
-    <>
+    <div className="Colors">
       <h1>Welcome to the color factory!</h1>
       <Link to="/color/new">Add a color</Link>
       {colors.length > 0 && (
-        <div>
+        <div className="Colors-items">
           <h3>Please select a color:</h3>
-          {colors.map((color) => (
-            <Link to={`/color/${color}`}>{color}</Link>
-          ))}
+          {renderColors()}
         </div>
       )}
-    </>
+    </div>
   );
 };
 
