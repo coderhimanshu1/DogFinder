@@ -4,6 +4,9 @@ import {
   BrowserRouter,
 } from "react-router-dom/cjs/react-router-dom.min";
 import "./App.css";
+import Color from "./Color";
+import Colors from "./Colors";
+import NewColorform from "./NewColorForm";
 
 function App() {
   return (
@@ -11,6 +14,9 @@ function App() {
       <BrowserRouter>
         <Route exact path="/colors">
           <Colors />
+        </Route>
+        <Route path="/color/new">
+          <NewColorform />
         </Route>
         <Route path="/colors/:color">
           <Color />
