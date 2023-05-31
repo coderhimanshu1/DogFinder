@@ -24,7 +24,7 @@ const NewColorform = ({ addColor }) => {
 
   return (
     <div className="NewColor">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="NewColor-form">
         <div>
           <label htmlFor="name">Color name</label>
           <input

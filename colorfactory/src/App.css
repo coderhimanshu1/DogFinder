@@ -4,3 +4,83 @@ body,
 #root {
   height: 100%;
 }
+
+.Colors {
+  text-align: center;
+}
+
+.Colors-header {
+  background-color: black;
+  color: aliceblue;
+  padding: 10%;
+}
+
+.Colors-header a {
+  text-decoration: none;
+  color: antiquewhite;
+  background-color: rgb(75, 71, 71);
+  padding: 2%;
+  box-shadow: 5px 4px 5px rgb(98, 93, 93);
+}
+
+.Colors-header a:hover {
+  color: rgb(66, 65, 62);
+  background-color: rgb(240, 239, 202);
+  padding: 3%;
+  font-size: 20px;
+  box-shadow: 5px 4px 5px rgb(161, 161, 93);
+}
+
+.Colors-items {
+  background-color: antiquewhite;
+  color: rgb(194, 114, 194);
+  padding: 10%;
+}
+
+.Colors-items ul {
+  list-style-type: none;
+}
+
+.Colors-items a {
+  text-decoration: none;
+}
+
+.NewColor {
+  background-color: rgb(218, 229, 229);
+  height: 100%;
+  text-align: center;
+  padding: 10%;
+}
+
+.NewColor-form {
+  background-color: rgb(183, 222, 222);
+  padding: 10%;
+}
+
+.NewColor-form label {
+  padding: 3%;
+  font-weight: bold;
+}
+
+.NewColor-form input {
+  padding: 2%;
+  margin: 1%;
+  width: 25%;
+}
+
+.Color {
+  height: 100%;
+  text-align: center;
+  padding: 10%;
+  font-size: 60px;
+}
+
+.Color a {
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 2%;
+  border-radius: 2%;
+  color: rgb(152, 158, 162);
+  background-color: antiquewhite;
+}
