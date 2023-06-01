@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# Color Factory App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React App to demonstrate React router patterns. This app lets you add color from a React form and it to the list which is a link to its own route.
+
+## Praxtice in Action
+
+
+
+https://github.com/coderhimanshu1/React-router-patterns/assets/87880250/95de96fb-2d0d-4803-af48-a96a7fbc36d4
+
+
 
 ## Available Scripts
 
